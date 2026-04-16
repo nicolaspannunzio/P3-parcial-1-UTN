@@ -12,3 +12,8 @@ export interface Product {
     disponible: boolean;
     categorias: ICategory[]; 
 }
+
+export interface CartItem {
+  product: Product;
+  cantidad: number;
+}
