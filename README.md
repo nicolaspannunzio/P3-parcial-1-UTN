@@ -1,10 +1,10 @@
-# Food Store - Evaluación Parcial I
+# Food Store - Evaluación Parcial 1
 
-**Institución:** Universidad Tecnológica Nacional
-**Carrera:** Tecnicatura Universitaria en Programación
-**Materia:** Programación III
-**Alumno:** Nicolás A. Pannunzio
-**Año:** 2026
+* **Institución:** UTN (Universidad Tecnológica Nacional)
+* **Carrera:** Tecnicatura Universitaria en Programación
+* **Materia:** Programación III
+* **Alumno:** Nicolás A. Pannunzio
+* **Año:** 2026
 
 ## 📝 Descripción Breve del Proyecto
 
@@ -65,3 +65,11 @@ Una vez inicializado el servidor, Vite indicará la URL local en la terminal. Ab
 │       └── navigate.ts      # Función para redirigir al usuario
 ├── package.json       # Dependencias y scripts
 └── README.md          # Este archivo
+
+---
+
+## 👨‍💻 Autor
+
+**Nicolás A. Pannunzio** *Full Stack Developer | QA Specialist* [![GitHub](https://img.shields.io/badge/GitHub-Perfil-181717?style=for-the-badge&logo=github)](https://github.com/nicolaspannunzio)
+
+> *Proyecto desarrollado como instancia de evaluación para la Tecnicatura Universitaria en Programación (UTN) - Ciclo Lectivo 2026.*
