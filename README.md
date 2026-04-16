@@ -1,10 +1,9 @@
-# Food Store - Evaluación Parcial 1
+# Food Store - Evaluación Parcial I
 
 * **Institución:** UTN (Universidad Tecnológica Nacional)
 * **Carrera:** Tecnicatura Universitaria en Programación
 * **Materia:** Programación III
 * **Alumno:** Nicolás A. Pannunzio
-* **Año:** 2026
 
 ## 📝 Descripción Breve del Proyecto
 
@@ -65,6 +64,8 @@ Una vez inicializado el servidor, Vite indicará la URL local en la terminal. Ab
 │       └── navigate.ts      # Función para redirigir al usuario
 ├── package.json       # Dependencias y scripts
 └── README.md          # Este archivo
+
+```
 
 ---
 
