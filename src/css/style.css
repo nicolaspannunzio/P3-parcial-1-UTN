@@ -20,7 +20,6 @@ body {
   min-height: 100vh;
 }
 
-/* --- HEADER --- */
 header {
   background-color: var(--color-blanco);
   padding: 20px 40px;
@@ -36,7 +35,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* --- AUTH (login y registro) --- */
+/* auth */
 .auth-body {
   display: flex;
   flex-direction: column;
@@ -135,7 +134,7 @@ header h1 {
   display: none;
 }
 
-/* --- DASHBOARD (admin y client) --- */
+/* dashboard admin/client */
 .dashboard {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -184,7 +183,6 @@ header h1 {
   margin-bottom: 15px;
 }
 
-/* --- BOTÓN LOGOUT --- */
 .btn-logout {
   background-color: transparent;
   color: var(--color-primario);
@@ -200,7 +198,6 @@ header h1 {
   color: var(--color-blanco);
 }
 
-/* --- FOOTER --- */
 footer {
   grid-area: footer;
   background-color: var(--color-texto);
@@ -209,11 +206,8 @@ footer {
   padding: 20px;
 }
 
-/* ================================================
-   STORE — Catálogo y Carrito
-   ================================================ */
+/* ---- store ---- */
 
-/* --- STORE HEADER --- */
 .store-header {
   background-color: var(--color-primario);
   padding: 20px 40px;
@@ -237,7 +231,6 @@ footer {
   text-decoration: none;
   font-weight: bold;
   font-size: 0.95rem;
-  transition: opacity 0.2s;
 }
 
 .store-header a:hover {
@@ -253,7 +246,6 @@ footer {
   margin-left: 6px;
 }
 
-/* --- LAYOUT CATÁLOGO --- */
 .store-layout {
   display: flex;
   max-width: 1200px;
@@ -262,20 +254,20 @@ footer {
   padding: 0 1rem;
 }
 
-/* --- SIDEBAR CATEGORÍAS --- */
+/* sidebar */
 .store-sidebar {
   width: 220px;
   flex-shrink: 0;
   background-color: var(--color-blanco);
   border-radius: 8px;
-  padding: 1.2rem;
+  padding: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   align-self: flex-start;
 }
 
 .store-sidebar h2 {
   font-size: 1rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12px;
   color: var(--color-texto);
   text-transform: uppercase;
 }
@@ -285,12 +277,11 @@ footer {
 }
 
 #category-list li {
-  padding: 0.5rem 0.7rem;
+  padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
   color: #444;
-  transition: background 0.2s, color 0.2s;
 }
 
 #category-list li:hover {
@@ -303,35 +294,31 @@ footer {
   color: var(--color-blanco);
 }
 
-/* --- MAIN CATÁLOGO --- */
 .store-main {
   flex: 1;
 }
 
-/* --- BUSCADOR --- */
 #search-bar {
   width: 100%;
-  padding: 0.7rem 1rem;
+  padding: 10px 14px;
   border: 1px solid var(--color-borde);
   border-radius: 8px;
   font-size: 1rem;
   margin-bottom: 1.2rem;
   outline: none;
-  transition: border-color 0.2s;
 }
 
 #search-bar:focus {
   border-color: var(--color-primario);
 }
 
-/* --- GRID PRODUCTOS --- */
+/* grilla de productos */
 #product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.2rem;
 }
 
-/* --- TARJETA PRODUCTO --- */
 .product-card {
   background-color: var(--color-blanco);
   border-radius: 10px;
@@ -377,7 +364,7 @@ footer {
 }
 
 .product-card button {
-  padding: 0.5rem;
+  padding: 8px;
   border: none;
   border-radius: 6px;
   background-color: var(--color-primario);
@@ -413,7 +400,7 @@ footer {
   grid-column: 1 / -1;
 }
 
-/* --- CARRITO --- */
+/* carrito */
 .cart-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -477,6 +464,7 @@ footer {
   color: #666;
 }
 
+/* controles cantidad */
 .quantity-controls {
   display: flex;
   align-items: center;
@@ -494,7 +482,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s;
 }
 
 .quantity-controls button:hover {
@@ -522,7 +509,6 @@ footer {
   font-size: 1.3rem;
   cursor: pointer;
   padding: 0 0.3rem;
-  transition: color 0.2s;
 }
 
 .btn-remove:hover {

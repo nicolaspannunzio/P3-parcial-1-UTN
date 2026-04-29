@@ -4,11 +4,9 @@ import type { Product, CartItem } from "../../../types/product";
 
 const CART_KEY = "foodstore_cart";
 
-// ── Estado ───────────────────────────────────────────────
 let selectedCategory: number | "all" = "all";
 let searchQuery = "";
 
-// ── Helpers localStorage ─────────────────────────────────
 function getCart(): CartItem[] {
   const raw = localStorage.getItem(CART_KEY);
   return raw ? JSON.parse(raw) : [];
@@ -37,7 +35,6 @@ function updateCartCount(): void {
   if (badge) badge.textContent = String(total);
 }
 
-// ── Render categorías ────────────────────────────────────
 function renderCategories(): void {
   const list = document.getElementById("category-list");
   if (!list) return;
@@ -56,6 +53,7 @@ function renderCategories(): void {
     list.appendChild(li);
   });
 
+  // el "Todas" ya viene en el HTML, solo le agrego el evento
   const allLi = list.querySelector<HTMLLIElement>('[data-id="all"]');
   if (allLi) {
     allLi.addEventListener("click", () => {
@@ -73,7 +71,6 @@ function setActiveCategory(activeLi: HTMLLIElement): void {
   activeLi.classList.add("active");
 }
 
-// ── Render productos ─────────────────────────────────────
 function getFilteredProducts(): Product[] {
   return PRODUCTS.filter((p) => {
     const matchSearch = p.nombre
@@ -107,7 +104,7 @@ function renderProducts(): void {
     const categoryName = product.categorias[0]?.nombre ?? "";
     const isAvailable = product.disponible && product.stock > 0;
 
-    // Construimos la card con textContent para evitar XSS
+    // uso textContent para evitar XSS
     const img = document.createElement("img");
     img.alt = product.nombre;
     img.src = `/src/assets/${product.imagen}`;
@@ -152,7 +149,6 @@ function renderProducts(): void {
   });
 }
 
-// ── Init ─────────────────────────────────────────────────
 function init(): void {
   renderCategories();
   renderProducts();
@@ -164,7 +160,6 @@ function init(): void {
     renderProducts();
   });
 
-  // Logout
   const logoutBtn = document.getElementById("logout-btn");
   logoutBtn?.addEventListener("click", () => logout());
 }
